@@ -65,12 +65,8 @@ module.exports = {
 		}),
 	],
 	devServer: {
-		allowedHosts: ['localhost', '.codesandbox.io'],
-		compress: true,
-		inline: true,
+		allowedHosts: ['localhost', '.codesandbox.io', '.preview.csb.app'],
+		compress: true,		
 		port: '8080',
-		host: '0.0.0.0',
-		disableHostCheck: true,
-		public: "zg41w7-8080.preview.csb.app"
 	},
 }
