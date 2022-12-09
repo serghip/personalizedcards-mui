@@ -65,9 +65,8 @@ module.exports = {
 		}),
 	],
 	devServer: {
-		allowedHosts: "all",
+		allowedHosts: 'auto' | 'all' | Array[string],
 		historyApiFallback: true,
-		compress: true,
-  		public: 'store-client-nestroia1.c9users.io' // That solved it
+		compress: true  		
 	}
 }
