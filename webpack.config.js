@@ -15,7 +15,7 @@ module.exports = {
 		alias: {
 			'@components': path.resolve(__dirname, 'src/components/'),
 			'@containers': path.resolve(__dirname, 'src/containers/'),
-			'@pages': path.resolve(__dirname, 'src/pages/'),			
+			'@pages': path.resolve(__dirname, 'src/pages/'),
 			'@hooks': path.resolve(__dirname, 'src/hooks/'),
 			'@routes': path.resolve(__dirname, 'src/routes/'),
 			'@styles': path.resolve(__dirname, 'src/styles/'),
@@ -64,14 +64,16 @@ module.exports = {
 			filename: '[name].css'
 		}),
 	],
-	
+
 	devServer: {
 		static: {
-      			directory: path.join(__dirname, 'public'),
-    		},
-    		compress: true,
-    		port: 9000,
-		allowedHosts: 'auto' | 'all' | Array[string],
-		historyApiFallback: true,		
+			directory: path.join(__dirname, 'public'),
+		},
+		compress: true,
+		port: 9000,
+		allowedHosts: [
+			'codesandbox.io'
+		],
+		historyApiFallback: true,
 	}
 }
