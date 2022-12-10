@@ -63,10 +63,5 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: '[name].css'
 		}),
-	],
-	devServer: {
-		allowedHosts: ['localhost', '.codesandbox.io', '.preview.csb.app'],
-		compress: true,
-		port: '8080',
-	},
+	]
 }
