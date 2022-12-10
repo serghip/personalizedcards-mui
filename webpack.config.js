@@ -9,11 +9,6 @@ module.exports = {
 		filename: 'bundle.js',
 		publicPath: '/'
 	},
-	optimization: {
-		splitChunks: {
-			chunks: 'all',
-		},
-	},
 	mode: 'development',
 	resolve: {
 		extensions: ['.js', '.jsx'],
