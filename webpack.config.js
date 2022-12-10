@@ -14,7 +14,7 @@ module.exports = {
 			chunks: 'all',
 		},
 	},
-	mode: 'production',
+	mode: 'development',
 	resolve: {
 		extensions: ['.js', '.jsx'],
 		alias: {
