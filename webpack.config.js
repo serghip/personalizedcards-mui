@@ -9,7 +9,12 @@ module.exports = {
 		filename: 'bundle.js',
 		publicPath: '/'
 	},
-	mode: 'development',
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+		},
+	},
+	mode: 'production',
 	resolve: {
 		extensions: ['.js', '.jsx'],
 		alias: {
@@ -66,7 +71,7 @@ module.exports = {
 	],
 	devServer: {
 		allowedHosts: ['localhost', '.codesandbox.io', '.preview.csb.app'],
-		compress: true,		
+		compress: true,
 		port: '8080',
 	},
 }
