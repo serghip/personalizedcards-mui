@@ -9,8 +9,7 @@ module.exports = {
 		filename: 'bundle.js',
 		publicPath: '/'
 	},
-	devtool: 'inline-source-map',
-	mode: 'production',
+	mode: 'development',
 	resolve: {
 		extensions: ['.js', '.jsx'],
 		alias: {
