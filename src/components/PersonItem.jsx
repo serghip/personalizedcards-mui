@@ -71,8 +71,7 @@ const handleMask = () =>{
 			</div>
 			<br/>
 			<Button sx={{marginLeft: '50px'}} variant='outlined' id='button' onClick={handleMask}>Botón CAMBIO MASCARA</Button>
-		</Card>
-		
+		</Card>	
 	);
 }
 
