@@ -63,13 +63,5 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: '[name].css'
 		}),
-	],	
-	devServer: {
-		compress:true,
-		open:true,
-		static: {
-			directory: path.join(__dirname, 'public'),
-		},
-		historyApiFallback: true,
-	},
+	],
 }
