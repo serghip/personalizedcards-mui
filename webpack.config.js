@@ -10,14 +10,6 @@ module.exports = {
 		publicPath: '/'
 	},
 	mode: 'development',
-
-	devServer: {
-		static: {
-			directory: path.join(__dirname, 'public'),
-		},
-		compress: true,
-		port: 9000,
-	},
 	resolve: {
 		extensions: ['.js', '.jsx'],
 		alias: {
@@ -71,5 +63,13 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: '[name].css'
 		}),
-	]
+	],	
+	devServer: {
+
+		compress:true,
+		open:true,
+		static: {
+			directory: path.join(__dirname, 'public'),
+		},
+	},
 }
