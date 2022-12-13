@@ -10,6 +10,14 @@ module.exports = {
 		publicPath: '/'
 	},
 	mode: 'development',
+
+	devServer: {
+		static: {
+			directory: path.join(__dirname, 'public'),
+		},
+		compress: true,
+		port: 9000,
+	},
 	resolve: {
 		extensions: ['.js', '.jsx'],
 		alias: {
