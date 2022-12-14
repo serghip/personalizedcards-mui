@@ -1,7 +1,7 @@
 import * as React from 'react';
 import useGetPersons from '../hooks/useGetPersons';
-import PersonItem from '@components/PersonItem';
-import '@styles/PersonList.scss';
+import PersonItem from '../components/PersonItem';
+import '../styles/PersonList.scss';
 import data from '../data.json'
 
 import ErrorAlert from '../components/ErrorAlert';

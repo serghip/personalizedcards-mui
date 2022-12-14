@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import '@styles/PersonItem.scss';
+import '../styles/PersonItem.scss';
 import { Table, TableRow, TableCell } from '@mui/material';
 import foto from '@images/foto.png';
 
