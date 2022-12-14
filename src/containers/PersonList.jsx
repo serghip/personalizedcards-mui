@@ -1,7 +1,7 @@
 import * as React from 'react';
 import useGetPersons from '../hooks/useGetPersons';
-import PersonItem from '@components/PersonItem';
-import '@styles/PersonList.scss';
+import PersonItem from '../components/PersonItem';
+import '../styles/PersonList.css';
 import data from '../data.json'
 
 import ErrorAlert from '../components/ErrorAlert';
@@ -35,26 +35,26 @@ const Root = styled('div')(({ theme }) => ({
 	[theme.breakpoints.up('xs')]: {
 		display: "flex",
 		paddingBottom: 40,
-		flexDirection : "column",
-    	justifyContent : "center",
-    	alignItems: "center"
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center"
 	},
 	[theme.breakpoints.up('sm')]: {
 		display: "grid",
 		gridTemplateColumns: "repeat(2, 1fr)",
 		paddingBottom: 40,
 	},
-	[theme.breakpoints.up('md')]: {		
+	[theme.breakpoints.up('md')]: {
 		display: "grid",
 		gridTemplateColumns: "repeat(3, 1fr)",
 		paddingBottom: 40,
 	},
-	[theme.breakpoints.up('lg')]: {		
+	[theme.breakpoints.up('lg')]: {
 		display: "grid",
 		gridTemplateColumns: "repeat(4, 1fr)",
 		paddingBottom: 40,
 	},
-	[theme.breakpoints.up('xl')]: {		
+	[theme.breakpoints.up('xl')]: {
 		display: "grid",
 		gridTemplateColumns: "repeat(5, 1fr)",
 		paddingBottom: 40,
@@ -123,7 +123,7 @@ function TablePaginationActions(props) {
 //PersonList
 const PersonList = () => {
 
-////////// DATOS DINAMICOS DESDE BASE DE DATOS PREDEFINIDA //////////
+	////////// DATOS DINAMICOS DESDE BASE DE DATOS PREDEFINIDA //////////
 	/*const persons = useGetPersons(API);
 	//Llamada y declaracion de productos
 	function createData(id, nomyape, jerarquia, image, promedio) {
@@ -135,10 +135,10 @@ const PersonList = () => {
 			rows.push(createData(person.id, person.nomyape, person.jerarquia, person.image, person.promedio))
 		))
 	};*/
-//////////////////////////////////////////////////////////////////////
-////////// DATOS ESTATICOS DESDE BASE DE DATOS LOCAL //////////
+	//////////////////////////////////////////////////////////////////////
+	////////// DATOS ESTATICOS DESDE BASE DE DATOS LOCAL //////////
 	const rows = data.directivos;
-//////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////
 
 	//React state y calculo por hoja
 	const [page, setPage] = React.useState(0);
@@ -159,25 +159,22 @@ const PersonList = () => {
 		<>
 			<section>
 				<Paper elevation={3} sx={{ borderRadius: 5 }}>
+					<Root>
+						{(rowsPerPage > 0
+							? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+							: rows
+						).map((row) => (
+							// Llamada de component
+							<PersonItem key={row.id} row={row}></PersonItem>
+						))}
+						{/*{emptyRows > 0 && (
+						<TableRow style={{ height: 53 * emptyRows }}>
+							<TableCell colSpan={6} />
+						</TableRow>
+					)}*/}
+					</Root>
 					<TableContainer>
 						<Table>
-							<TableBody>
-								<Root>
-					
-								{(rowsPerPage > 0
-									? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-									: rows
-								).map((row) => (
-									// Llamada de component
-									<PersonItem key={row.id} row={row}></PersonItem>
-								))}
-								{/*{emptyRows > 0 && (
-									<TableRow style={{ height: 53 * emptyRows }}>
-										<TableCell colSpan={6} />
-									</TableRow>
-								)}*/}
-								</Root>
-							</TableBody>
 							<TableFooter>
 								<TableRow>
 									{/*TABLEPAGINATION*/}

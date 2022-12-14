@@ -1,5 +1,3 @@
-@import 'vars';
-
 #contenedor-cartas {
     display: flex;
     flex-direction: row;

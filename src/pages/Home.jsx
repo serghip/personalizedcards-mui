@@ -1,6 +1,6 @@
 import React from 'react';
-import PersonList from '@containers/PersonList';
-import '@styles/Home.scss';
+import PersonList from '../containers/PersonList';
+import '../styles/Home.css';
 
 const Home = () => {
 	return (
