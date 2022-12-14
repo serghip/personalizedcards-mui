@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import '../styles/PersonItem.scss';
 import { Table, TableRow, TableCell } from '@mui/material';
-import foto from '@images/foto.png';
+import foto from '../assets/images/foto.png';
 
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
