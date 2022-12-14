@@ -65,5 +65,10 @@ module.exports = {
 	devServer: {
 		static: "./dist",
 		hot: true,
+		open:true,
+		compress: true,
+		historyApiFallback:{
+            index:'dist/index.html'
+        },
 	}
 };
