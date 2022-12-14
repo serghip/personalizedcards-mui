@@ -63,12 +63,14 @@ module.exports = {
 		}),
 	],
 	devServer: {
-		static: "./dist",
+		static: {
+			directory: path.join(__dirname, 'public'),
+		},
 		hot: true,
-		open:true,
+		open: true,
 		compress: true,
-		historyApiFallback:{
-            index:'dist/index.html'
-        },
+		historyApiFallback: {
+			index: 'dist/index.html'
+		},
 	}
 };
