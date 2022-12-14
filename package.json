@@ -39,7 +39,7 @@
     "@emotion/styled": "^11.9.3",
     "css-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.2.0",
-    "sass": "^1.38.0",
+    "sass": "^1.56.2",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
     "webpack-dev-server": "^4.11.1"
